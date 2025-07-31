@@ -15,6 +15,7 @@ public class Car {
         color="blue";
         drive("black");
         System.out.println();
+        System.out.println();
         
     }
 
