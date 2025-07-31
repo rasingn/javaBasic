@@ -6,7 +6,6 @@ public class Car {
     static String[]maintenance={"A","B","c"};
 
     static void drive(String color){
-        // color="yellow";
         color ="pink";
         System.out.println("i have car with color "+ color+", model = "+model+" and v ="+v+", main ="+maintenance[2]);
              
@@ -15,6 +14,7 @@ public class Car {
     public static void main(String[] args) {
         color="blue";
         drive("black");
+        System.out.println();
         
     }
 
