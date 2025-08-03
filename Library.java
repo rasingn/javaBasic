@@ -1,15 +1,22 @@
 public class Library {
 
+    
+   
     public static void main(String[] args) {
 
-        Book book1 = new Book("Younis","java");       
-        book1.print();
+      Book book1= new Book("Java","Younis");
+      book1.print();
 
-        Book book2 = new Book("Zainabu","Basic");
-        book2.print();
+      book1.XX();
 
-        Book[]books={book1,book2};
-        
+      Book book2 = new Book("Basic","Areej");
+      book2.print();
+
+     
+
+  
+
+      
       
         
         

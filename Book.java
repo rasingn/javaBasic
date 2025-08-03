@@ -1,17 +1,24 @@
-public class Book {
+public class Book extends Cover {
 
-    private String Auth;
-    private String Title;
+   
+
+     String Title ;
+     String Auth ;
 
 
-    Book(String Auth, String Title){
-       this.Title=Title;
-       this.Auth=Auth;
-
+    Book(String Title, String Auth){
+        this.Title=Title;
+        this.Auth=Auth;
     }
 
-    void print(){
-        System.out.println(Title+" - "+Auth);
+
+
+     void print(){
+        System.out.println(Title+" "+Auth);
     }
+
+    
+
+
     
 }
