@@ -1,24 +1,21 @@
-public class Book extends Cover {
+public class Book {
 
-   
+  static String title = "Java";
+  static String author = "Younis";
 
-     String Title ;
-     String Auth ;
+   // Actions -> function ->method
+   static String print(String title) {
+      System.out.println(title);
+      return "";
+   }
 
+   public static void main(String[] args) {
+      String x = "php";
+      String msg=print(x);
 
-    Book(String Title, String Auth){
-        this.Title=Title;
-        this.Auth=Auth;
-    }
+      System.out.println(msg);
+     
 
+   }
 
-
-     void print(){
-        System.out.println(Title+" "+Auth);
-    }
-
-    
-
-
-    
 }
