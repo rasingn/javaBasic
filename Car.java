@@ -7,7 +7,7 @@ void start(){
       System.out.println(brand + "is starting")
     }  
 
-void start(){
+void stop(){
       System.out.println(brand + "is stopping")
     }
   
@@ -20,5 +20,5 @@ public static void main(String[] args) {
       MyCar.color = "Blue";
 
     MyCar.start();
-    MyCar.start();
+    MyCar.stop();
 }
