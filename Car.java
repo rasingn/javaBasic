@@ -4,11 +4,11 @@ Public Class Car {
     static String color = "White";
   
 void start(){
-      System.out.println(brand + "is starting")
+      System.out.println(brand + " car is driving")
     }  
 
 void stop(){
-      System.out.println(brand + "is stopping")
+      System.out.println(brand + " car has stopped")
     }
   
 }
