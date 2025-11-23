@@ -1,4 +1,4 @@
-Public Class Car {
+public class Car {
 
     static String brand = "Toyota";
     static String color = "White";
@@ -14,11 +14,5 @@ void stop(){
 }
 
 public static void main(String[] args) {
-    MyCar = Car();
-    
-      MyCar.brand = "Honda";
-      MyCar.color = "Blue";
-
-    MyCar.start();
-    MyCar.stop();
+ 
 }
