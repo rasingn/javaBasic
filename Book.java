@@ -1,21 +1,17 @@
 public class Book {
 
-  static String title = "Java";
-  static String author = "Younis";
+ private String title;
+ private String auther;
+ 
+Book(String title,String auther){
+this.title=title;
+this.auther=auther;
 
-   // Actions -> function ->method
-   static String print(String title) {
-      System.out.println(title);
-      return "";
-   }
 
-   public static void main(String[] args) {
-      String x = "php";
-      String msg=print(x);
+}
+ void print(){
+     System.out.println(title+"  "+ auther);
+ }
 
-      System.out.println(msg);
-     
-
-   }
 
 }
