@@ -19,14 +19,25 @@ public class Library {
             Scanner scan = new Scanner(System.in);
             x = scan.nextInt();
             if (x == 1) {
-                System.out.println("Enter Title");
+                System.out.print("Enter Title: ");
                 String title = scan.next();
-                System.out.println("Enter Auther");
+                System.out.println();
+                System.out.print("Enter Auther: ");
                 String auther = scan.next();
+                System.out.println();
                 book1 = new Book(title, auther);
                 books.add(book1);
             } else if (x == 2) {
-                System.out.println("DELETE");
+                System.out.println("DELETE a book from the list:");
+                for (int i = 0; i < books.size(); i++) {
+                    System.out.print(i + "- ");
+                    books.get(i).print();
+                }
+                System.out.print("DELETE the book that hold the number: ");
+                int i = scan.nextInt();
+                books.remove(i);
+
+
             } else if (x == 3) {
                 for (int i = 0; i < books.size(); i++) {
                     books.get(i).print();
@@ -34,7 +45,7 @@ public class Library {
             } else if (x == 4) {
                 System.out.println("EXIT");
             } else
-                System.out.println("WRONG");
+                System.out.println("WRONG, Write a number from the list above");
         }
 
     }
