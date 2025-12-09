@@ -1,0 +1,90 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add A Book To The Library</title>
+    <style>
+    
+    body{
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bookshelf.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+        
+    nav{
+      display: flex;
+      background-color: rgb(32, 32, 32);
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img{
+      height: 120px;
+    }
+
+    nav li{
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-link ul li{
+      list-style: none;
+      display: inline;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-link ul li::after{
+      color: white;
+      width: 0;
+      height: 2;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+
+    h1{
+      color: #ffffff;
+    }
+
+    input {
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .inputs {
+        margin-top: 20px;
+    }
+
+    </style>
+
+        
+    </head>
+
+<body>
+
+  <nav>
+    <a href="library website.html" class="librarylogo"><img src="librarylogo.png"></img></a>
+    <div class="nav-link">
+      <ul>
+        <li><a href="library website.html">Home</a></li>
+        <li><a href="libraryAddBook.html">Add Book</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 style="text-align: center; margin-top: 10%; margin-bottom: 5%;">Add Book</h1>
+
+<div class="inputs" style="margin-left: 20%;">
+    <input id="titleInput" type="text" placeholder="Book Title">
+    <input id="authorInput" type="text" placeholder="Author">
+    <button style="background-color: #86d657; height: 28; width: 60;">Add</button>
+</div>
+
+</body>
+
+
+
+
+</html> 

@@ -7,6 +7,10 @@ public class Library {
     public static void main(String[] args) {
         int x = 0;
         Book book1 = null;
+        Car car1 = new Car();
+        car1.brand;
+
+        Car.
 
         List<Book> books = new ArrayList<Book>();
         while (x != 4) {
@@ -26,7 +30,9 @@ public class Library {
                 String auther = scan.next();
                 System.out.println();
                 book1 = new Book(title, auther);
+                book1.x();
                 books.add(book1);
+                
             } else if (x == 2) {
                 System.out.println("DELETE a book from the list:");
                 for (int i = 0; i < books.size(); i++) {

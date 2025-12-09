@@ -1,0 +1,155 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Book Library</title>
+  <style>
+
+    body{
+      background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bookshelf.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav{
+      display: flex;
+      background-color: rgb(32, 32, 32);
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+      size: 60px;
+    }
+
+    nav img{
+      height: 120px;
+    }
+
+    nav li{
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-link ul li{
+      list-style: none;
+      display: inline;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-link ul li::after{
+      color: white;
+      width: 0;
+      height: 2;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+
+    h1{
+      color: #ffffff;
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin-top: 20px;
+    }
+
+    thead{
+      background-color: #f3a14e;
+    }
+
+    th, td {
+      border: 1px solid #c1c1c1;
+      background-color: #f9cb9e;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .inputs {
+      margin-top: 20px;
+      
+    }
+	
+    td button{
+    color: white;
+    background: red;
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <nav>
+    <a href="library website.html" class="librarylogo"><img src="librarylogo.png"></img></a>
+    <div class="nav-link">
+      <ul>
+        <li><a href="library website.html">Home</a></li>
+        <li><a href="libraryAddBook.html">Add Book</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 style="text-align: center; margin-top: 10%; margin-bottom: 5%;">Book Library</h1>
+
+  <!--<div class="inputs" style="margin-left: 20%;">
+    <input id="titleInput" type="text" placeholder="Book Title">
+    <input id="authorInput" type="text" placeholder="Author">
+    <button style="background-color: #86d657; height: 28; width: 60;">Add</button>
+  </div>-->
+
+  <table id="bookTable" style="margin: 40 auto; text-align: center; border: 1;">
+    <thead>
+      <tr class="tablehead">
+        <th>#</th>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      	<tr>
+            <td>1</td><td>The Silent Grove</td><td>Amelia Hart</td>
+            <td style="width: 40;"><button style="border: none; background: none; padding: 0;">
+                  <img src="delete.png" alt="Delete Button" width="30">
+              </button></td>
+      	</tr>
+      	<tr>
+            <td>2</td><td>Paths of Light</td><td>Rami Clarke</td>
+            <td><button style="border: none; background: none; padding: 10;">
+                  <img src="delete.png" alt="Delete Button" width="30">
+              </button></td>
+      	</tr>
+     	<tr>
+            <td>3</td><td>Echoes in the Dust</td><td>Lina Navarro</td>
+            <td><button style="border: none; background: none; padding: 10;">
+                  <img src="delete.png" alt="Delete Button" width="30" >
+              </button></td>
+     	</tr>
+      	<tr>
+            <td>4</td><td>Midnight Lantern</td><td>J. K. Sloan</td>
+            <td><button style="border: none; background: none; padding: 10;">
+                  <img src="delete.png" alt="Delete Button" width="30">
+              </button></td>
+      	</tr>
+      	<tr>
+            <td>5</td><td>Waves of Tomorrow</td><td>Hassan Ameer</td>
+            <td><button style="border: none; background: none; padding: 10;">
+                  <img src="delete.png" alt="Delete Button" width="30">
+              </button></td>
+      	</tr>
+    </tbody>
+  </table>
+
+  </body>
+
+
+</html>
+
+
+
