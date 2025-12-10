@@ -3,88 +3,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Simple Book Library</title>
   <style>
-    /* body{
-      background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bookshelf.jpg);
-      background-position: center;
-      background-size: cover;
-      position: relative;
-    }
-
-    nav{
-      display: flex;
-      background-color: rgb(32, 32, 32);
-      padding: 2% 6%;
-      justify-content: space-between;
-      align-items: center;
-      size: 60px;
-    }
-
-    nav img{
-      height: 120px;
-    }
-
-    nav li{
-      flex: 1;
-      text-align: right;
-    }
-
-    .nav-link ul li{
-      list-style: none;
-      display: inline;
-      padding: 8px 12px;
-      position: relative;
-    }
-
-    .nav-link ul li::after{
-      color: white;
-      width: 0;
-      height: 2;
-      display: block;
-      margin: auto;
-      transition: 0.5s;
-    }
-
-
-    h1{
-      color: #ffffff;
-    }
-
-
-    table {
-      border-collapse: collapse;
-      width: 70%;
-      margin-top: 20px;
-    }
-
-    thead{
-      background-color: #f3a14e;
-    }
-
-    th, td {
-      border: 1px solid #c1c1c1;
-      background-color: #f9cb9e;
-      padding: 8px;
-      text-align: left;
-    }
-
-    input {
-      padding: 5px;
-      margin-right: 10px;
-    }
-
-
-    .inputs {
-      margin-top: 20px;
-      
-    }
-	
-    td button{
-    color: white;
-    background: red;
-
-    } */
+    
   </style>
 </head>
 
@@ -113,60 +35,57 @@
     <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" >Add</button>
   </div>
 
-  <div class="flex md:flex-row justify-center py-6 gap-4 flex-col px-5 ">
-    <input id="titleInput" type="text" placeholder="Book Title" class="inline-flex justify-center py-2 px-4 border shadow-sm text-sm font-medium rounded-md hover:bg-indigo-300 ">
-    <input id="authorInput" type="text" placeholder="Author" class="inline-flex justify-center py-2 px-4 border shadow-sm text-sm font-medium rounded-md hover:bg-indigo-300">
-    <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 ">Add</button>
-  </div>
-  <div class="">
-  <table id="bookTable" class="table w-full border border-gray-400 text-sm">
+ 
+  <div class="flex table-auto md:table-fixed">
+  <table id="bookTable" class="border-collapse border border-gray-400 w-full mx-4">
     <thead>
       <tr>
-        <th class="border-collapse border border-gray-400 p-4">#</th>
-        <th class="border-collapse border border-gray-400 p-4">Book Title</th>
-        <th class="border-collapse border border-gray-400 p-4">Author</th>
-        <th class="border-collapse border border-gray-400 p-4">Delete</th>
+        <th class="border-collapse border border-gray-400 p-4 text-left">#</th>
+        <th class="border-collapse border border-gray-400 p-4 text-left">Author</th>
+        <th class="border-collapse border border-gray-400 p-4 text-left">Book Title</th>
+        <th class="border-collapse border border-gray-400 p-4 text-left">Delete</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>The Silent Grove</td>
-        <td>Amelia Hart</td>
-        <td style="width: 40;"><button style="border: none; background: none; padding: 0;">
-            <img src="delete.png" alt="Delete Button" width="30">
+      <tr >
+        <td class="border-collapse border border-gray-400 p-4">1</td>
+        <td class="border-collapse border border-gray-400 p-4">The Silent Grove</td>
+        <td class="border-collapse border border-gray-400 p-4">Amelia Hart</td>
+        <td class="border-collapse border border-gray-400 p-4">
+          <button >
+           <i class="fa-solid fa-xmark text-red-500"></i>
           </button></td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>Paths of Light</td>
-        <td>Rami Clarke</td>
-        <td><button style="border: none; background: none; padding: 10;">
-            <img src="delete.png" alt="Delete Button" width="30">
+        <td class="border-collapse border border-gray-400 p-4">2</td>
+        <td class="border-collapse border border-gray-400 p-4">Paths of Light</td>
+        <td class="border-collapse border border-gray-400 p-4">Rami Clarke</td>
+        <td class="border-collapse border border-gray-400 p-4"><button >
+            <i class="fa-solid fa-xmark text-red-500"></i>
           </button></td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>Echoes in the Dust</td>
-        <td>Lina Navarro</td>
-        <td><button style="border: none; background: none; padding: 10;">
-            <img src="delete.png" alt="Delete Button" width="30">
+        <td class="border-collapse border border-gray-400 p-4">3</td>
+        <td class="border-collapse border border-gray-400 p-4">Echoes in the Dust</td>
+        <td class="border-collapse border border-gray-400 p-4">Lina Navarro</td>
+        <td class="border-collapse border border-gray-400 p-4"><button >
+            <i class="fa-solid fa-xmark text-red-500"></i>
           </button></td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>Midnight Lantern</td>
-        <td>J. K. Sloan</td>
-        <td><button style="border: none; background: none; padding: 10;">
-            <img src="delete.png" alt="Delete Button" width="30">
+        <td class="border-collapse border border-gray-400 p-4">4</td>
+        <td class="border-collapse border border-gray-400 p-4">Midnight Lantern</td>
+        <td class="border-collapse border border-gray-400 p-4">J. K. Sloan</td>
+        <td class="border-collapse border border-gray-400 p-4"><button >
+            <i class="fa-solid fa-xmark text-red-500"></i>
           </button></td>
       </tr>
       <tr>
-        <td>5</td>
-        <td>Waves of Tomorrow</td>
-        <td>Hassan Ameer</td>
-        <td><button style="border: none; background: none; padding: 10;">
-            <img src="delete.png" alt="Delete Button" width="30">
+        <td class="border-collapse border border-gray-400 p-4">5</td>
+        <td class="border-collapse border border-gray-400 p-4">Waves of Tomorrow</td>
+        <td class="border-collapse border border-gray-400 p-4">Hassan Ameer</td>
+        <td class="border-collapse border border-gray-400 p-4"><button >
+            <i class="fa-solid fa-xmark text-red-500"></i>
           </button></td>
       </tr>
     </tbody>
