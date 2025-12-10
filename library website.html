@@ -97,14 +97,20 @@
     </div>
     <div class="basis-2/3 content-center">
       <ul class="flex flex-row-reverse gap-4 ">
-        <li class="bg-white p-2 rounded hover:bg-indigo-400"><a href="library website.html">Home</a></li>
-        <li class="bg-white p-2 rounded hover:bg-indigo-400"><a href="libraryAddBook.html">Add Book</a></li>
+        <li class="bg-white p-2 rounded"><a href="library website.html">Home</a></li>
+        <li class="bg-white p-2"><a href="libraryAddBook.html">Add Book</a></li>
       </ul>
     </div>
   </div>
   <div class="flex flex-row justify-center py-6">
 
     <h1 class="text-4xl">Book Library</h1>
+  </div>
+
+  <div class="flex md:flex-row justify-center py-6 gap-4 flex-col px-5 ">
+    <input id="titleInput" type="text" placeholder="Book Title" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-700 ">
+    <input id="authorInput" type="text" placeholder="Author" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-700 ">
+    <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" >Add</button>
   </div>
 
   <div class="flex md:flex-row justify-center py-6 gap-4 flex-col px-5 ">
@@ -124,47 +130,42 @@
     </thead>
     <tbody>
       <tr>
-        <td class="border-collapse border border-gray-400 p-4">1</td>
-        <td class="border-collapse border border-gray-400 p-4">The Silent Grove</td>
-        <td class="border-collapse border border-gray-400 p-4">Amelia Hart</td>
-        <td class="border-collapse border border-gray-400 p-4">
-          <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-200">
+        <td>1</td>
+        <td>The Silent Grove</td>
+        <td>Amelia Hart</td>
+        <td style="width: 40;"><button style="border: none; background: none; padding: 0;">
             <img src="delete.png" alt="Delete Button" width="30">
           </button></td>
       </tr>
       <tr>
-        <td class="border-collapse border border-gray-400 p-4">2</td>
-        <td class="border-collapse border border-gray-400 p-4">Paths of Light</td>
-        <td class="border-collapse border border-gray-400 p-4">Rami Clarke</td>
-        <td class="border-collapse border border-gray-400 p-4">
-          <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-200">
+        <td>2</td>
+        <td>Paths of Light</td>
+        <td>Rami Clarke</td>
+        <td><button style="border: none; background: none; padding: 10;">
             <img src="delete.png" alt="Delete Button" width="30">
           </button></td>
       </tr>
       <tr>
-        <td class="border-collapse border border-gray-400 p-4">3</td>
-        <td class="border-collapse border border-gray-400 p-4">Echoes in the Dust</td>
-        <td class="border-collapse border border-gray-400 p-4">Lina Navarro</td>
-        <td class="border-collapse border border-gray-400 p-4">
-          <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-200">
+        <td>3</td>
+        <td>Echoes in the Dust</td>
+        <td>Lina Navarro</td>
+        <td><button style="border: none; background: none; padding: 10;">
             <img src="delete.png" alt="Delete Button" width="30">
           </button></td>
       </tr>
       <tr>
-        <td class="border-collapse border border-gray-400 p-4">4</td>
-        <td class="border-collapse border border-gray-400 p-4">Midnight Lantern</td>
-        <td class="border-collapse border border-gray-400 p-4">J. K. Sloan</td>
-        <td class="border-collapse border border-gray-400 p-4">
-          <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-200">
+        <td>4</td>
+        <td>Midnight Lantern</td>
+        <td>J. K. Sloan</td>
+        <td><button style="border: none; background: none; padding: 10;">
             <img src="delete.png" alt="Delete Button" width="30">
           </button></td>
       </tr>
       <tr>
-        <td class="border-collapse border border-gray-400 p-4">5</td>
-        <td class="border-collapse border border-gray-400 p-4">Waves of Tomorrow</td>
-        <td class="border-collapse border border-gray-400 p-4">Hassan Ameer</td>
-        <td class="border-collapse border border-gray-400 p-4">
-          <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md hover:bg-red-200">
+        <td>5</td>
+        <td>Waves of Tomorrow</td>
+        <td>Hassan Ameer</td>
+        <td><button style="border: none; background: none; padding: 10;">
             <img src="delete.png" alt="Delete Button" width="30">
           </button></td>
       </tr>
@@ -174,4 +175,5 @@
 
 </body>
 
-</html> 
+
+</html>
