@@ -23,8 +23,8 @@
     </div>
     <div class="basis-2/3 content-center">
       <ul class="flex flex-row-reverse gap-4 ">
-        <li class="bg-white p-2 rounded hover:bg-slate-300"><a href="library website.html">Home</a></li>
-        <li class="bg-white p-2 rounded hover:bg-slate-300"><a href="libraryAddBook.html">Add Book</a></li>
+        <li class="bg-white p-2 rounded hover:bg-indigo-100jc"><a href="library website.html">Home</a></li>
+        <li class="bg-white p-2 rounded hover:bg-indigo-100"><a href="libraryAddBook.html">Add Book</a></li>
       </ul>
     </div>
   </div>
@@ -34,8 +34,8 @@
   </div>
 
   <div class="flex md:flex-row justify-center py-6 gap-4 flex-col px-5 ">
-    <input id="titleInput" type="text" placeholder="Book Title" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-700 ">
-    <input id="authorInput" type="text" placeholder="Author" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-700 ">
+    <input id="titleInput" type="text" placeholder="Book Title" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-100 ">
+    <input id="authorInput" type="text" placeholder="Author" class="inline-flex justify-center py-2 px-4 border  shadow-sm text-sm font-medium rounded-md   hover:bg-indigo-100 ">
     <button id="btn" onclick="add()" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" >Add</button>
   </div>
 
@@ -50,7 +50,7 @@
         <th class="border-collapse border border-gray-400 p-4 text-left">Delete</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="bookBody">
       <!-- <tr >
         <td class="border-collapse border border-gray-400 p-4">1</td>
         <td class="border-collapse border border-gray-400 p-4">The Silent Grove</td>
@@ -68,6 +68,9 @@
 </body>
 
 <script>
+
+let books = [];
+
 function add(){
  
   var title=document.getElementById('titleInput').value;
@@ -75,11 +78,40 @@ function add(){
 
   console.log(title +' '+author);
 
-  //array
+  if (title.trim() === "" || author.trim() === "") {
+    alert("Please enter both title and author!");
+    return;
+  }
 
-  //render table
+  books.push({ title, author });
+
+  displayBooks();
+
+  document.getElementById('titleInput').value = "";
+  document.getElementById('authorInput').value = "";
+
+}
+
+function displayBooks() {
+  let tbody = document.getElementById("bookBody");
   
+  tbody.innerHTML = "";// clear table body to avoid duplication
 
+  books.forEach((book, index) => {
+    let tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td class="border border-gray-400 p-3">${index + 1}</td>
+      <td class="border border-gray-400 p-3">${book.author}</td>
+      <td class="border border-gray-400 p-3">${book.title}</td>
+      <td class="border border-gray-400 p-3">
+        <button class="fa-solid fa-xmark text-red-500">
+        </button>
+      </td>
+    `;
+
+    tbody.appendChild(tr);
+  });
 }
 
 </script>
